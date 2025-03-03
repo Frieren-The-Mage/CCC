@@ -71,9 +71,6 @@ while True:
     hash_val += (find_ascii(h[r]) + 1)
     hash_val %= MOD
 
-    current.popleft()
-    current.append(h[r])
-
     if is_permutation(window, target):
         distinct_permutations.add(hash_val)
 
