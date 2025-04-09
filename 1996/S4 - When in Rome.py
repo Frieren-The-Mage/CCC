@@ -1,3 +1,6 @@
+#https://dmoj.ca/problem/ccc96s4
+# Good problem for simple Roman Numeral Conversions
+
 roman = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100,
         "D": 500, "M": 1000}
 
@@ -7,7 +10,8 @@ rev = {1: "I", 5: 'V', 10: 'X', 50: 'L', 100: 'C',
 
 def rom_to_num(n):
     ans = 0
-
+        
+    # Instead of using brain and looping, just .replace() and take the sum
     n = n.replace("IV", "IIII")
     n = n.replace("IX", "VIIII")
     n = n.replace("XL", "XXXX")
@@ -23,6 +27,7 @@ def num_to_rom(n):
     ans = ''
 
     while n:
+        # Take the current maximum, and once max is found, re-loop
         for i in sorted(rev.keys(), reverse=True):
             if i <= n:
                 n -= i
