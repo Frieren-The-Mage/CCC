@@ -18,7 +18,7 @@ Algorithm Steps:
 
 Note: I considered [i, i] as a swap left, but it doesn't matter
 
-Store indices of the values ofA A
+Store indices of the values of A
 
 First, keep track of the rightmost endpoint of all your left swaps so far -> X
 as well as the rightmost startpoint of all your right swaps so far -> Y
